@@ -15,7 +15,7 @@ public class QuestionThree {
 //        }
     }
 
-    public static List<Integer> mergeTwoLists(List<Integer> A , List<Integer>B){
+    public  List<Integer> mergeTwoLists(List<Integer> A , List<Integer>B){
 
         for (int index1 = 0 , index2=0 ; index2<B.size();index1++){
             if(index1==A.size()||A.get(index1)>B.get(index2))

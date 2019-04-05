@@ -6,10 +6,10 @@ public class QuestionTwo {
 
     public static void main(String[] args) {
 
-        System.out.println(hasDuplicatesUsingMap(new int[]{1,1,2,2,3,3},6));
+        //System.out.println(hasDuplicatesUsingMap(new int[]{1,1,2,2,3,3},6));
     }
 
-    public static String hasDuplicatesUsingMap(int[] arrA, int N) {
+    public  String hasDuplicatesUsingMap(int[] arrA, int N) {
 
         if (N != arrA.length)
             return "Given length is not equal to size of Array";
