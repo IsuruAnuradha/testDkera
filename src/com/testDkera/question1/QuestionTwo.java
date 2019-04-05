@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 public class QuestionTwo {
 
-//    public static void main(String[] args) {
-//
-//        System.out.println(hasDuplicatesUsingMap(new int[]{1,1,2,2,3,3},6));
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(hasDuplicatesUsingMap(new int[]{1,1,2,2,3,3},6));
+    }
 
     public static String hasDuplicatesUsingMap(int[] arrA, int N) {
 
@@ -16,7 +16,7 @@ public class QuestionTwo {
 
         HashMap<Integer, Integer> map = new HashMap<>();
         int numberOfDuplicates = 0;
-        String result = "";
+        String result = " ";
 
         for (int i = 0; i < arrA.length; i++) {
             if(arrA[i]> N){
@@ -26,7 +26,7 @@ public class QuestionTwo {
                 int count = map.get(arrA[i]);
                 map.put(arrA[i],++count);
                 if(count==2) {
-                    result = result +"," + String.valueOf(Math.abs(arrA[i])) ;
+                    result = result  + String.valueOf(Math.abs(arrA[i]))+"," ;
                 }
                 numberOfDuplicates++;
             } else {
@@ -34,7 +34,7 @@ public class QuestionTwo {
             }
         }
         if (numberOfDuplicates >= 1)
-            return "Duplicates are:" + result;
+            return "Duplicates are:" + result.substring(0,result.length()-1);
         else
             return "No Duplicates";
     }
