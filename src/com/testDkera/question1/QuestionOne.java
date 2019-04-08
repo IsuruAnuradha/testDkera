@@ -8,6 +8,10 @@ public class QuestionOne {
 
     public int findLargestElement(int[] arr){
 
+        if(arr.length>100){
+            throw new IllegalArgumentException("Array length is more than 100");
+        }
+
         int max= arr[0];
         for (int i = 0; i <arr.length ; i++) {
             if(arr[i]>max)
